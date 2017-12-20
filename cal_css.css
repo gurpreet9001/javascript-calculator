@@ -1,0 +1,120 @@
+html {
+  background: #100a1c;
+  background-image:
+    radial-gradient(70% 25% ellipse at center top, #356d6c 0%, rgba(0,0,0,0) 100%);
+  background-attachment: fixed;
+  color: #6cacc5;
+}
+
+body {
+  color: #6cacc5;
+  font: 300 18px/1.6 "Source Sans Pro",sans-serif;
+  margin: 0;
+  padding: 5em 0 2em;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+}
+
+h6 {
+    font-size: 10px;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
+.calculator {
+  font-size: 28px;
+  margin: 0 auto;
+  width: 10em;
+}
+
+/* Calculator after dividing by zero */
+.broken {
+  animation: broken 4s;
+  transform: translate3d(0,-2000px,0);
+  opacity: 0;
+}
+
+.viewer {
+  color: #c97874;
+  float: left;
+  line-height: 3em;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 7.5em;
+  height: 3em;
+}
+
+.reset {
+    margin: 60px 0px 0px 60px;
+    padding: 0px;
+    width: 6em;
+    overflow: hidden;
+}
+
+button {
+  border: 0;
+  background: rgba(42,50,113, .28);
+  color: #6cacc5;
+  cursor: pointer;
+  float: left;
+  font: inherit;
+  margin: 0.25em;
+  width: 2em;
+  height: 2em;
+  transition: all 0.5s;
+    border-radius: 8px;
+  }
+
+/* Division by zero animation */
+@keyframes broken {
+  0% {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+
+  5% {
+    transform: rotate(5deg);
+  }
+
+  15% {
+    transform: rotate(-5deg);
+  }
+
+  20% {
+    transform: rotate(150deg);
+  }
+
+  25% {
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  70% {
+    transform: translate3d(0,2000px,0);
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0,-2000px,0);
+  }
+}
